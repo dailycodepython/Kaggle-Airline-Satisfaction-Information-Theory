@@ -72,7 +72,7 @@ This forces the optimization algorithms to prioritize fine-grained splits in the
 
 ## 🏆 Model Level-1 Layer Configuration
 
-To establish maximal structural diversity and shield the final submission from public leaderboard over-fitting (*Shake-up Protection*), three separate boosting architectures are trained concurrently inside a strict **5-Fold Stratified Cross-Validation пайплайн**:
+To establish maximal structural diversity and shield the final submission from public leaderboard over-fitting (*Shake-up Protection*), three separate boosting architectures are trained concurrently inside a strict **5-Fold Stratified Cross-Validation pipeline**:
 
 | Model Architecture | Growth Strategy | Special Feature Processing | Validation Peak (OOF AUC) |
 | :--- | :--- | :--- | :--- |
