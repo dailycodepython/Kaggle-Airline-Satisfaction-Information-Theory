@@ -64,7 +64,8 @@ Flight departure and arrival delays contain extreme, long-tailed outliers that i
 
 To match model thresholds with human emotional realities, we project raw delays onto a compact, bounded $[0, 1]$ space using a **Relativistic Damping Factor** ($\gamma$):
 
-$$\gamma = rac{1.0}{\sqrt{1.0 + rac{	ext{Delay}_{	ext{Departure}} + 	ext{Delay}_{	ext{Arrival}}}{10.0}}}$$
+$$\gamma = \frac{1.0}{\sqrt{1.0 + \frac{\text{Delay}_{\text{Departure}} + \text{Delay}_{\text{Arrival}}}{10.0}}}$$
+
 
 This forces the optimization algorithms to prioritize fine-grained splits in the low-delay zone while completely insulating the tree nodes from training noise caused by massive multi-hour flight delays.
 
@@ -91,7 +92,7 @@ To establish maximal structural diversity and shield the final submission from p
 
 Rather than blending model matrices with static, guessed ratios (e.g., $0.33$ each), the meta-ensemble layer applies a **Coordinate Descent Hill Climbing** search algorithm. 
 
-The optimizer monitors the combined validation space, executing localized shifts in model weight arrays ($ec{W}$) to maximize the global area under the ROC curve:
+The optimizer monitors the combined validation space, executing localized shifts in model weight arrays ($\vec{W}$) to maximize the global area under the ROC curve:
 
 $$ \arg\max_{W} \text{AUC} \left( Y_{\text{true}}, \sum_{m \in M} W_m \cdot \text{OOF}_m \right) $$
 $$ \text{subject to } \sum W_m = 1.0, \quad W_m \ge 0 $$
