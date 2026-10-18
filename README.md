@@ -88,7 +88,9 @@ Rather than blending model matrices with static, guessed ratios (e.g., $0.33$ ea
 
 The optimizer monitors the combined validation space, executing localized shifts in model weight arrays ($ec{W}$) to maximize the global area under the ROC curve:
 
-$$rg\max_{ec{W}} 	ext{ROC-AUC} \left( Y_{	ext{true}}, \sum_{m \in M} W_m \cdot 	ext{OOF}_{m} ight) \quad 	ext{subject to } \sum W_m = 1.0, \, W_m \ge 0$$
+$$ \arg\max_{W} \text{AUC} \left( Y_{\text{true}}, \sum_{m \in M} W_m \cdot \text{OOF}_m \right) $$
+$$ \text{subject to } \sum W_m = 1.0, \quad W_m \ge 0 $$
+
 
 This yields an optimized, robust blend where the superior structural traits of the leader (CatBoost) are perfectly reinforced and insulated by the secondary boosting frameworks.
 
