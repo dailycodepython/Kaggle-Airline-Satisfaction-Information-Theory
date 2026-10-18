@@ -98,9 +98,9 @@ This yields an optimized, robust blend where the superior structural traits of t
 
 ## 🛠️ Repository File Structure
 
-* `Masaya_Kawamata_Master_Framework.ipynb` — The production-ready framework architecture template containing pre-built classes for features, category sync layers, and weight optimizers.
-* `airline_satisfaction_triple_stack.ipynb` — The active training session running the raw data, cross-validation runs, and logs.
-* `README.md` — Complete engineering documentation and algorithmic breakdowns.
+* **submission_shannon_entropy_non_linear_scaled_triple_stack.ipynb** — The active training session running the raw data, cross-validation runs, and mathematical feature engineering logs.
+* **README.md** — Complete engineering documentation and algorithmic breakdowns.
+
 
 ---
 *Disclaimer: Developed independently as an author-driven machine learning methodology.*
