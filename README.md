@@ -80,6 +80,11 @@ To establish maximal structural diversity and shield the final submission from p
 | **XGBoost** | Tree-wise (Depth-first) | Strict category synchronization across splits | `0.95931` |
 | **CatBoost** | Symmetric Trees | Ordered Target Encoding for `route_id` | **`0.96037`** |
 
+* ### 📈 Final Leaderboard Results
+* **CatBoost Solo Leader:** 0.95987 (Public LB)
+* ** Hill Climbing Optimized Ensemble:** 0.95998 (Public LB)
+
+
 ---
 
 ## 🏎️ Meta-Ensemble Optimization (Hill Climbing)
